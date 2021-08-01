@@ -1,0 +1,22 @@
+
+@import "./src/global-css/variables/variables";
+
+// For the styling of the headings
+// These are for the title usually at the top of each content block
+// They can either be h tags or no, depends on the context
+// Here we will not style H tags themselves, but dictate that by the size needed - h is reserved for SEO agnostic of styling\
+
+.heading{
+
+	strong, span{
+		display: block;
+
+		> span span{
+			color: #0f7373;
+		}
+	}
+
+	&__large{ font-size: $fifty; }
+
+	&__medium{ font-size: $thirty; }
+}

@@ -1,0 +1,82 @@
+
+@import "./src/global-css/variables/variables";
+
+// For the styling of the Haufig
+// I dont know what the fuck this actually means - I can't read German and I didn't know what else to call it
+
+.haufig{
+	@extend %display-flex;
+	position: relative;
+
+	// For the sizing of the left and right containers
+
+	> div{
+		position: relative;
+		width: 50%;
+	}
+
+	// For the container of text on the left side
+
+	&__text p{
+		max-width: 500px;
+	}
+
+	// For the spacing between the text items
+
+	.heading{
+		margin-bottom: 16px;
+	}
+
+	button{
+		margin-top: 20px;
+	}
+}
+
+// For the styling of the accordion thing on the right side of the container
+
+.accordion{
+	position: relative;
+	font-size: $twenty-two;
+
+	// For each of the line items
+	// This has the text on the left, arrow on the right and the border on the bottom
+
+	li{
+		@extend %display-flex-space-between;
+		@extend %flex-center-vertical;
+		padding: 20px 0;
+		border-bottom: 1px solid #dfdfdf;
+	}
+
+	// Doing the fuggin right arrow icon in CSS
+
+	.icon__arrow--right{
+		position: relative;
+		width: 15px;
+		height: 13px;
+
+		// For the styling of the two parts of the arrow - top and bottom
+
+		&:before, &:after{
+			content: ' ';
+			position: absolute;
+			width: 2px;
+			height: 8px;
+			background: #000;
+		}
+
+		// For the line on the top of the container
+
+		&:before{
+			top: 0;
+			transform: rotate( -45deg );
+		}
+
+		// For the line on the bottom of the container
+
+		&:after{
+			bottom: 0;
+			transform: rotate( 45deg );
+		}
+	}
+}

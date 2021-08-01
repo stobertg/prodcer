@@ -1,0 +1,25 @@
+
+@import "./src/global-css/variables/variables";
+
+// For the styling of the content container
+// This is the master container that dictates the alignment of each content
+
+.content{
+	position: relative;
+	max-width: 1300px;
+	width: 90%;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+// For background color support
+
+.content__wrap{
+	position: relative;
+	width: 100vw;
+	overflow: hidden;
+
+	&--white{
+		background: $white;
+	}
+}

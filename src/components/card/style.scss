@@ -1,0 +1,66 @@
+
+@import "./src/global-css/variables/variables";
+
+// For the styling of the card
+// This contains the capabilities - with the icon on the top and the text below
+
+.card__cap{
+	@extend %speed-3ms;
+	@extend %display-flex-wrap;
+	@extend %flex-center-horizontal;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 50px 40px;
+	background: $white;
+	border-radius: 32px;
+	text-align: center;
+	line-height: 1.3;
+
+	// For the sizing of the icon on the top of the container
+
+	&--icon{
+		@extend %display-flex;
+		@extend %flex-center-all;
+		position: relative;
+		width: 45px;
+		height: 45px;
+		margin: 0 auto;
+
+		// For the sizing of the icon image within the container
+
+		img{
+			max-height: 100%;
+			width: auto;
+		}
+	}
+
+	// For the text on the bottom of the container
+
+	figcaption{
+		margin-top: 24px;
+	}
+
+	// For the hover effect with the button
+	// This will animate the icon on the top up, subtly
+
+	&:hover{
+		transform: translateY( -10px );
+	}
+}
+
+
+// For the disabed card - gray all the things out
+
+.card__disabled{
+	color: #dedede;
+}
+
+
+
+
+
+
+
+
+

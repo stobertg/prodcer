@@ -1,0 +1,47 @@
+
+// Import all variables into this file so that we can keep everything in one file
+// This will allow us to share this file, in one line, in the react components
+
+@import 'align';
+@import 'animations';
+@import 'type';
+
+// For the breakpoints
+
+$mobile: 767px;
+
+// For the color of the devices
+
+$iphone-black: #1e1e1e;
+
+// For the colors used within the site
+
+$white: #FFF;
+$black: #404040;
+
+// For my brand colors
+
+$green: #0f7373;
+$yellow: #f3ea19;
+
+// Font sizes
+
+$twelve: 0.750em;
+$fourteen: 0.875em;
+$sixteen: 1rem;
+$eighteen: 1.125rem;
+$twenty-two: 1.375rem;
+$thirty: 1.875rem;
+$fifty: 3.125rem;
+
+// Border Radius
+
+$border-radius: 20px;
+$border-radius-alt: 30px;
+
+// For the different colors of the fonts that can be used
+
+.text{
+
+	&__green{ color: $green; }
+}

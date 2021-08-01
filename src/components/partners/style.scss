@@ -1,0 +1,34 @@
+
+@import "./src/global-css/variables/variables";
+
+// For the styling of the partners section
+// This contains five icons
+
+.partners{
+	position: relative;
+
+	ul{
+		@extend %flex-center-vertical;
+
+		li{
+
+			&:last-child img{
+				width: 40%;
+			}
+		}
+	}
+
+	// For the sizing of the icons witin the container
+
+	img{
+		width: 70%;
+	}
+
+	.heading{ 
+		margin-bottom: 32px;
+
+		span{
+			display: inline-block;
+		}
+	}
+}

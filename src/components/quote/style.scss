@@ -1,0 +1,110 @@
+
+@import "./src/global-css/variables/variables";
+
+// For the styling of the quote section
+// This sits on a white background, with a title and the quote below - has the name of the person on the bottom of the container
+
+.quote{
+	position: relative;
+	padding: 110px 0;
+	background: $white;
+	border-radius: 30px;
+
+	// For the spacing of the section title and the quote
+
+	&__wrap .heading__medium{
+		margin-bottom: 40px;
+	}
+
+	// For the container of the content within the master container
+	// This holds all the content in the center
+
+	&__content{
+		position: relative;
+		max-width: 1024px;
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	// For the container of the title of the quote
+	// This has the large title and the quote icon on the top left of the container
+
+	&__title{
+		position: relative;
+		padding-bottom: 24px;
+
+		// For the decorative quote icon on the left of the container
+
+		&:before{
+			content: '"';
+			position: absolute;
+			top: -30px;
+			left: -35px;
+			font-size: 200px;
+			color: #eaeaea;
+			z-index: 0;
+		}
+
+		// Make sure the heading text is above the decorative quote icon on the left
+
+		.heading{
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	// For the container of the person who said the quote
+	// This is on the bottom of the container
+
+	&__person{
+		@extend %display-flex;
+		@extend %flex-center-vertical;
+		position: relative;
+		padding-top: 60px;
+		color: $green;
+		line-height: 1.3;
+
+		// For the headshot of the person
+		// Contained within the circle
+
+		.headshot{
+			@extend %display-flex;
+			@extend %flex-center-all;
+			position: relative;
+			width: 60px;
+			height: 60px;
+			margin-right: 16px;
+			border-radius: 50%;
+			overflow: hidden;
+
+			// Position the image in the center of the container
+
+			img{
+				position: absolute;
+				min-height: 100%;
+				max-height: 100%;
+				width: auto;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

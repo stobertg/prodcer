@@ -1,0 +1,26 @@
+
+@import "./src/global-css/variables/variables";
+
+// For the styling of the hero dividers
+// This shows up here and there - idk, atleast it's on the homepage
+
+.hero__divider{
+	@extend %display-flex;
+	@extend %flex-center-vertical;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 440px;
+	margin: 80px 0;
+
+	// Position the image in the center of the container
+
+	img{
+		position: absolute;
+		height: 100%;
+		width: auto;
+		left: -9999px;
+		right: -9999px;
+		margin: auto;
+	}
+}

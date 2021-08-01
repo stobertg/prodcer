@@ -1,0 +1,102 @@
+
+@import "./src/global-css/variables/variables";
+
+// For the styling of ther hero section
+// This holds the text on the left and the bubble image on the right
+
+.hero{
+	position: relative;
+	width: 100%;
+	padding: 100px 0;
+	
+	// For the container of the content - centered in the master hero container
+	// This has the text on the left and the hero image on the right
+
+	&__content{
+		@extend %display-flex-space-between;
+		@extend %flex-center-vertical;
+		position: relative;
+		max-width: 1300px;
+		width: 90%;
+		margin: 0 auto;
+
+		// For the width of the side-by-side containers
+		// This is declaring the width of each container
+
+		> div{
+			
+			// For the text content on the left of the container
+
+			&:first-child{ width: 35%; }
+
+			// For the image container of the right of the container
+
+			&:last-child{ width: 60%; }
+		}
+	}
+
+	// For the styling of the text on the left side of the container
+
+	&__text{
+		position: relative;
+
+		// For the spacing from the heading and the rest of the text
+		// For the sibtitle above, and the paragraph below
+
+		.heading{
+			padding: 12px 0 24px;
+
+			// For the color change below the black title text
+
+			> div div{ color: #0f7373; }
+		}
+
+		// For the container of the EU content - on the top
+
+		&--callout{
+			position: relative;
+			width: 300px;
+			padding: 32px 16px 32px 0;
+			margin-bottom: 60px;
+
+			// Allow the content to sit on top of the white background color
+
+			> div{
+				position: relative;
+				z-index: 1;
+			}
+
+			// For the white background within the container
+			// This is has to flush to the left but will be weird on wider browser - so we'll give it a max-width
+
+			&:before{
+				content: ' ';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: calc( 100% + 2000px );
+				height: 100%;
+				background: $white;
+				border-radius: 16px;
+				box-shadow: 0px 2px 10px rgba( 0,0,0, 0.05 );
+				overflow: hidden;
+				z-index: 0;
+			}
+
+			&-eu{
+				@extend %display-flex;
+				@extend %flex-center-vertical;
+				position: relative;
+				margin-top: 20px;
+			}
+
+			// For the sizing of the EU Flag within the callout
+
+			img{
+				width: 100px;
+				margin-right: 16px;
+			}
+
+		}
+	}
+}

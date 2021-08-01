@@ -1,0 +1,51 @@
+
+@import "./src/global-css/variables/variables";
+
+// For the default styling of the list
+// This is the basic UL and LI format - supports inline and vertical compositions
+
+.list__contain{
+
+	// For the vertical orentiation of the list
+
+	&--vertical{
+
+		li{
+			padding: 8px 0;
+		}
+	}
+
+	ul{
+		@extend %display-flex-wrap;
+		position: relative;
+		width: 100%;
+	}
+
+	li{
+
+		> div{
+			height: 100%;
+		}
+	}
+}
+
+.list__columns{
+
+	&--5{
+
+		li{ 
+			width: 20%; 
+			padding-right: 20px;
+
+			&:nth-child( n + 6 ){
+				margin-top: 20px;
+			}
+
+			// Remove the right padding on every 5th li
+
+			&:nth-child( 5n + 5 ){
+				padding-right: 0;
+			}
+		}
+	}
+}

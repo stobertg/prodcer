@@ -1,0 +1,19 @@
+
+@import "./src/global-css/variables/variables";
+
+// For the styling of the buttons used throughout the site
+
+.btn{
+	@extend %display-flex;
+	@extend %flex-center-all;
+	position: relative;
+	height: 44px;
+	padding: 0 24px;
+
+	// For the different colors of the buttons
+
+	&__black{
+		background: #000;
+		color: $white;
+	}
+}
